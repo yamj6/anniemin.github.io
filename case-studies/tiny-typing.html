@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny Typing — Annie Min</title>
+  <meta name="description" content="Case study: redesigning a watch-sized keyboard, from 2.34 to 20.98 words per minute." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Tiny Typing — Annie Min" />
+  <meta property="og:description" content="Redesigning a watch-sized keyboard, from 2.34 to 20.98 words per minute." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,800;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header id="site-header" data-root="../" data-page="projects"></header>
+
+  <main>
+    <section class="container cs-hero fade-up">
+      <a href="../index.html#projects" class="back-link">&larr; All projects</a>
+      <p class="eyebrow">Design Change Challenge · Bakeoff 3</p>
+      <h1>Tiny Typing</h1>
+      <p class="lead">Typing on a keyboard the size of an Apple Watch face. Across two rounds of prototyping and testing, our team raised typing speed from 2.34 to 20.98 words per minute.</p>
+
+      <div class="cs-cover"><img src="../assets/thumbs/tiny-typing.svg" alt="Illustration of a full keyboard on a smartwatch screen" /></div>
+
+      <div class="cs-facts">
+        <div class="meta-block"><span class="meta-label">My role</span><span class="meta-value">Designer, developer, tester</span></div>
+        <div class="meta-block"><span class="meta-label">Team</span><span class="meta-value">3 people</span></div>
+        <div class="meta-block"><span class="meta-label">Timeline</span><span class="meta-value">November 2025</span></div>
+        <div class="meta-block"><span class="meta-label">Course</span><span class="meta-value">05-391 Designing Human-Centered Software</span></div>
+      </div>
+    </section>
+
+    <div class="container cs-body">
+      <section class="cs-section">
+        <h2>The challenge</h2>
+        <div>
+          <p>We were given a working but very slow version of a keyboard on a screen the size of an apple watch. Users had to type phrases as quickly and 
+            accurately as possible, and the measurement for scores was <strong>words per minute with a penalty for errors</strong>. The starter code averaged just 2.34 WPM.</p>
+          <p>The constraint was the screen: every key competes for a few millimeters of space, so there's a constant trade-off between showing more letters and 
+            making each one easy to hit.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Ideation</h2>
+        <div>
+          <p>We generated a wide range of concepts before building anything, including:</p>
+          <ul class="concepts">
+            <li>Row swipe</li><li>Full keyboard</li><li>Word prediction</li><li>Swipe-to-type</li>
+            <li class="mine">Half keyboard with toggle</li><li class="mine">Alphabetical split</li><li class="mine">QWERTY split</li>
+            <li>Letter wheel</li><li>Color feedback</li><li>Key zoom</li><li>Handwriting input</li>
+            <li>Edge magnification</li><li>Auto-space</li>
+          </ul>
+          <p class="legend-note"><span class="dot"></span>Concepts I prototyped</p>
+          <p>Each team member built their own prototype. <strong>I built two split-keyboard variants</strong>: one dividing the alphabet in half (a–m / n–z) and one splitting a standard QWERTY layout into left and right halves, each shown one half at a time so the keys could be larger.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Testing &amp; iteration</h2>
+        <div>
+          <p>We tested the first round of prototypes with 8 people and averaged their WPM with penalty, then refined the most promising ideas and tested again.</p>
+
+          <div class="bar-chart" role="img" aria-label="Words per minute by prototype. Starter code 2.34. Round one: Swipe Row 5.14, Alphabetical Half 5.56, Split Keyboard 8.84, Full Keyboard 13.86. Round two: Half Keyboard Swipe 10, Full Keyboard with Dictionary 12.86, Full Keyboard with Color 17.54. Final: 20.98.">
+            <p class="bar-group-label">Baseline</p>
+            <div class="bar-row"><span class="bar-name">Starter code</span><div class="bar-track"><div class="bar baseline" style="width:11.2%"></div><span class="bar-value">2.34</span></div></div>
+
+            <p class="bar-group-label">Round 1</p>
+            <div class="bar-row"><span class="bar-name">Swipe Row</span><div class="bar-track"><div class="bar" style="width:24.5%"></div><span class="bar-value">5.14</span></div></div>
+            <div class="bar-row"><span class="bar-name">Alphabetical Half<em>my prototype</em></span><div class="bar-track"><div class="bar mine" style="width:26.5%"></div><span class="bar-value">5.56</span></div></div>
+            <div class="bar-row"><span class="bar-name">Split Keyboard<em>my prototype</em></span><div class="bar-track"><div class="bar mine" style="width:42.1%"></div><span class="bar-value">8.84</span></div></div>
+            <div class="bar-row"><span class="bar-name">Full Keyboard</span><div class="bar-track"><div class="bar" style="width:66.1%"></div><span class="bar-value">13.86</span></div></div>
+
+            <p class="bar-group-label">Round 2</p>
+            <div class="bar-row"><span class="bar-name">Half Keyboard + Swipe</span><div class="bar-track"><div class="bar" style="width:47.7%"></div><span class="bar-value">10.00</span></div></div>
+            <div class="bar-row"><span class="bar-name">Full + Dictionary</span><div class="bar-track"><div class="bar" style="width:61.3%"></div><span class="bar-value">12.86</span></div></div>
+            <div class="bar-row"><span class="bar-name">Full + Color</span><div class="bar-track"><div class="bar" style="width:83.6%"></div><span class="bar-value">17.54</span></div></div>
+
+            <p class="bar-group-label">Final</p>
+            <div class="bar-row"><span class="bar-name">Full + Color (final)</span><div class="bar-track"><div class="bar final" style="width:100%"></div><span class="bar-value">20.98</span></div></div>
+          </div>
+          <p class="chart-caption">Average words per minute with error penalty. Round 1 was averaged across 8 testers.</p>
+
+          <h3>Round 2 refinements</h3>
+          <ul>
+            <li><strong>Half Keyboard + Swipe</strong> built on my QWERTY split, replacing the toggle button with a swipe between halves.</li>
+            <li><strong>Full + Color</strong> flashed the tapped key green when correct and red when wrong, with more responsive taps.</li>
+            <li><strong>Full + Dictionary</strong> added word suggestions with better spacing for the top three picks.</li>
+          </ul>
+          <p>Testers found swiping between halves slower than just having every key visible, and the half layout felt less intuitive. The dictionary helped in principle but its constantly shifting suggestions added cognitive load, and the large word list strained the hardware.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Outcome</h2>
+        <div>
+          <div class="stats">
+            <div class="stat"><strong>20.98</strong><span>WPM in final testing, with only 1 error</span></div>
+            <div class="stat"><strong>~9&times;</strong><span>faster than the 2.34 WPM starter code</span></div>
+            <div class="stat"><strong>7</strong><span>prototypes built and tested across two rounds</span></div>
+          </div>
+          <p>We shipped the <strong>full keyboard with color feedback</strong>. Instant green/red feedback let people catch mistakes without slowing down, and keeping every key on screen removed the time spent switching layouts.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Reflection</h2>
+        <div>
+          <div class="callout">
+            <p class="eyebrow">Key takeaway</p>
+            <p>On a tiny screen, every extra step (toggling, swiping, scanning suggestions) costs more than it saves. Familiarity and immediate feedback beat cleverness.</p>
+          </div>
+          <p><a class="btn btn-outline" href="https://docs.google.com/presentation/d/1CmO52Stlb7y68t36N1oe1kZbhPrxc_yevVkQ-eG7yCo/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View the Bakeoff 3 slides &nearr;</a></p>
+        </div>
+      </section>
+    </div>
+
+    <section class="cs-next">
+      <div class="container cs-next-inner">
+        <div>
+          <p class="eyebrow">Next case study</p>
+          <h2><a href="mental-health.html">Student Mental Health &rarr;</a></h2>
+        </div>
+        <a href="../index.html#projects" class="btn btn-light">All projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

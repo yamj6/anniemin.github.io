@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pointing — Annie Min</title>
+  <meta name="description" content="Case study: redesigning a 4x4 target-selection grid to make clicking faster." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pointing — Annie Min" />
+  <meta property="og:description" content="Redesigning a 4x4 target-selection grid to make clicking faster." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,800;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header id="site-header" data-root="../" data-page="projects"></header>
+
+  <main>
+    <section class="container cs-hero fade-up">
+      <a href="../index.html#projects" class="back-link">&larr; All projects</a>
+      <p class="eyebrow">Design Change Challenge · Bakeoff 1</p>
+      <h1>Pointing</h1>
+      <p class="lead">Making a repetitive click-the-target task faster. Our team generated 18 interaction concepts, tested 11 techniques, 
+        and converged on a bubble cursor guided by color hints.</p>
+
+      <div class="cs-cover"><img src="../assets/thumbs/pointing.svg" alt="Illustration of a 4x4 grid with a highlighted target, a bubble cursor, and a dashed hint line to the next target" /></div>
+
+      <div class="cs-facts">
+        <div class="meta-block"><span class="meta-label">My role</span><span class="meta-value">Designer, developer, tester</span></div>
+        <div class="meta-block"><span class="meta-label">Team</span><span class="meta-value">4 people</span></div>
+        <div class="meta-block"><span class="meta-label">Timeline</span><span class="meta-value">October 2025</span></div>
+        <div class="meta-block"><span class="meta-label">Course</span><span class="meta-value">05-391 Designing Human-Centered Software</span></div>
+      </div>
+    </section>
+
+    <div class="container cs-body">
+      <section class="cs-section">
+        <h2>The challenge</h2>
+        <div>
+          <p>Users face a 4&times;4 grid of boxes where they have to accurately click on a box once it lights up. Over 16 trials, 
+            the score is meausred by the <strong>time between clicks</strong>, so every millisecond spent finding, moving to, or confirming a target counts.</p>
+          <p>We inherited an existing code file, refactored it, and set our goal to decrease the mental strain of these tasks: <strong>decision time</strong> 
+            (where is the target?) and <strong>movement time</strong> (getting the pointer there).</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Ideation</h2>
+        <div>
+          <p>Each of us generated concepts independently before we compared notes. Together we produced 18 ideas spanning visual hints, 
+            cursor behavior, keyboard input, and audio feedback.</p>
+          <ul class="concepts">
+            <li class="mine">Proximity highlighting</li>
+            <li class="mine">Proximity + numbered selection</li>
+            <li class="mine">Coordinate column selection</li>
+            <li class="mine">Undo shortcut</li>
+            <li class="mine">Arrow guidance to target</li>
+            <li>Bubble cursor</li><li>Zoom lens</li><li>Adaptive gain</li><li>Crosshair overlay</li><li>Mini-grid flick</li>
+            <li>Next-target color hint</li><li>Cursor attraction</li><li>Line to target</li><li>Numbered rows</li><li>Cursor scaling</li>
+            <li>Two-handed spacebar click</li><li>Audio cues</li><li>Positive feedback</li>
+          </ul>
+          <p class="legend-note"><span class="dot"></span>My concepts</p>
+          <p>My ideas focused on <strong>guiding attention</strong>: highlighting boxes as the cursor approaches, pairing that with number keys for selection, 
+            picking targets by row/column coordinates, and arrows that point toward the next target as a hinting system.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Testing &amp; iteration</h2>
+        <div>
+          <ol class="rounds">
+            <li><strong>Round 1: Prototyping and Testing</strong>
+              We created prototypes and timed scores for 11 of our ideas, including line indicators, numeric row selection, color hints, cursor attraction, 
+              spacebar clicking, bubble cursor, zoom lens, grid lock, adaptive gain, and a crosshair overlay. The bubble cursor, which snaps selection to the 
+              nearest box so the pointer never has to land precisely, significantly outperformed every other cursor option.</li>
+            <li><strong>Refine: Combining Ideas</strong>
+              We paired the bubble cursor with keyboard clicking and visual guidance. Dynamic color hinting and connecting lines between the cursor and the target box 
+              reduced both decision and movement time, which echoed the attention-guiding direction of my early concepts.</li>
+            <li><strong>Round 2: Dynamic vs. Fixed</strong>
+              We compared a dynamic bubble cursor against a fixed one, both with color hints, a line to the target, and spacebar clicking.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Outcome</h2>
+        <div>
+          <div class="stats">
+            <div class="stat"><strong>18</strong><span>concepts generated across the team</span></div>
+            <div class="stat"><strong>11</strong><span>techniques prototyped and timed in round 1</span></div>
+            <div class="stat"><strong>1</strong><span>clear winner: the bubble cursor</span></div>
+          </div>
+          <p>Our final design combined a <strong>bubble cursor</strong> with <strong>color hinting</strong> for the upcoming target, a <strong>line connecting the cursor to the target</strong>, and <strong>spacebar clicking</strong> so the hand on the mouse only has to move.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Reflection</h2>
+        <div>
+          <div class="callout">
+            <p class="eyebrow">Key takeaway</p>
+            <p>Hints help until the current box overlaps with the target one. At high speed, users found it hard to tell the current target from the hinted next one.</p>
+          </div>
+          <p>That final-testing observation is the clearest next step: make the current target and the hint visually distinct enough so that people can tell them apart at a glance. 
+            The project also showed me the value of testing many rough ideas early: timing quick versions of 11 techniques made the strongest option obvious in a way that discussion alone wouldn't have.</p>
+          <p><a class="btn btn-outline" href="https://docs.google.com/presentation/d/1RU4IrJyUyLe2iwohdRdCyTq388D0NrGd9GLIaGS1ISw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View the Bakeoff 1 slides &nearr;</a></p>
+        </div>
+      </section>
+    </div>
+
+    <section class="cs-next">
+      <div class="container cs-next-inner">
+        <div>
+          <p class="eyebrow">Next case study</p>
+          <h2><a href="tiny-typing.html">Tiny Typing &rarr;</a></h2>
+        </div>
+        <a href="../index.html#projects" class="btn btn-light">All projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

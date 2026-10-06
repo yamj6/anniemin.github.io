@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Mental Health — Annie Min</title>
+  <meta name="description" content="Case study: visualizing burnout across 150,000 student records in R." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Student Mental Health — Annie Min" />
+  <meta property="og:description" content="Visualizing burnout across 150,000 student records in R." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,800;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header id="site-header" data-root="../" data-page="projects"></header>
+
+  <main>
+    <section class="container cs-hero fade-up">
+      <a href="../index.html#projects" class="back-link">&larr; All projects</a>
+      <p class="eyebrow">Statistical Graphics &amp; Visualization</p>
+      <h1>Student Mental Health</h1>
+      <p class="lead">What actually predicts student burnout? Using a 150,000-student dataset, our team built visualizations in R to test common assumptions about grades, pressure, sleep, and anxiety.</p>
+
+      <!-- Swap this illustration for your real heat map: export it from RStudio as a PNG, save it in assets/, and change the src. -->
+      <div class="cs-cover"><img src="../assets/thumbs/mental-health.svg" alt="Abstract illustration of a binned heat map" /></div>
+
+      <div class="cs-facts">
+        <div class="meta-block"><span class="meta-label">My role</span><span class="meta-value">Analyst · Research Question 2</span></div>
+        <div class="meta-block"><span class="meta-label">Team</span><span class="meta-value">3 people</span></div>
+        <div class="meta-block"><span class="meta-label">Timeline</span><span class="meta-value">March – April 2026</span></div>
+        <div class="meta-block"><span class="meta-label">Tools</span><span class="meta-value">R · RStudio</span></div>
+      </div>
+    </section>
+
+    <div class="container cs-body">
+      <section class="cs-section">
+        <h2>The data</h2>
+        <div>
+          <div class="stats">
+            <div class="stat"><strong>150K</strong><span>student records, one row per student</span></div>
+            <div class="stat"><strong>20</strong><span>academic, psychological &amp; lifestyle features</span></div>
+            <div class="stat"><strong>3</strong><span>burnout levels: low, medium, high</span></div>
+          </div>
+          <p>We worked with the <strong>Student Mental Health and Burnout Dataset</strong> from Kaggle, a large synthetic dataset covering demographics (age, gender, course, year), academic indicators (CGPA, attendance, study hours), psychological scores (anxiety, depression, stress, academic pressure), lifestyle factors (sleep, activity, screen time), and social and financial indicators.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Research questions</h2>
+        <div>
+          <p>Each team member owned one question and the visualization best suited to answer it.</p>
+          <div class="rq-list">
+            <div class="rq">
+              <p class="eyebrow">RQ1 · Bar chart</p>
+              <p>How does burnout vary across student demographic and social groups?</p>
+            </div>
+            <div class="rq mine">
+              <p class="eyebrow">RQ2 · Binned heat map · My question</p>
+              <p>Are high-performing students (high CGPA) more susceptible to burnout under academic pressure than their lower-performing peers?</p>
+            </div>
+            <div class="rq">
+              <p class="eyebrow">RQ3 · Density contour plot</p>
+              <p>How does the relationship between sleep and anxiety differ across burnout levels?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>My analysis</h2>
+        <div>
+          <p>A common assumption is that high achievers burn out hardest when the pressure is on. To test it, I binned students by <strong>CGPA</strong> and by <strong>academic pressure level</strong>, then built a heat map where each tile shows the share of students in that group with <strong>high burnout</strong>. A heat map made it possible to compare every combination of the two variables at once.</p>
+          <!-- Add your exported heat map here:
+          <figure class="figure"><img src="../assets/heatmap.png" alt="Heat map of high-burnout percentage by CGPA and academic pressure" /></figure> -->
+          <div class="callout">
+            <p class="eyebrow">Finding</p>
+            <p>Every tile landed between roughly 31% and 36% high burnout. Students with low pressure and high CGPA burned out at about the same rate as students with high pressure and low CGPA.</p>
+          </div>
+          <p>In other words, <strong>neither CGPA nor academic pressure was a useful predictor of high burnout</strong> in this data, alone or together. That pointed us toward other factors, such as mental and physical health and study-life balance.</p>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Team findings</h2>
+        <div>
+          <ul>
+            <li><strong>Demographics (RQ1):</strong> burnout was split roughly evenly into thirds across every academic year and gender, so it's a shared student experience rather than concentrated in one group.</li>
+            <li><strong>Grades &amp; pressure (RQ2):</strong> no meaningful pattern; high-burnout rates stayed within a narrow 31–36% band.</li>
+            <li><strong>Sleep &amp; anxiety (RQ3):</strong> the clearest signal. Low-burnout students clustered around 8–9 hours of sleep, while one high-burnout cluster sat at just 4–5 hours with higher anxiety.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2>Reflection</h2>
+        <div>
+          <div class="callout">
+            <p class="eyebrow">Key takeaway</p>
+            <p>A "no pattern" result is still a result. Showing clearly that an assumed relationship isn't there redirects attention to the factors that matter.</p>
+          </div>
+          <p>Because the dataset is synthetic, these findings describe the data rather than real students. A natural next step would be to test whether the sleep and anxiety relationship holds in survey data from actual students.</p>
+          <p><a class="btn btn-outline" href="https://docs.google.com/presentation/d/1ZR8_kccfal4U0w3XGhmYPQA2-slTqbJr_3assf55akY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View the project slides &nearr;</a></p>
+        </div>
+      </section>
+    </div>
+
+    <section class="cs-next">
+      <div class="container cs-next-inner">
+        <div>
+          <p class="eyebrow">Next case study</p>
+          <h2><a href="pointing.html">Pointing &rarr;</a></h2>
+        </div>
+        <a href="../index.html#projects" class="btn btn-light">All projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>
