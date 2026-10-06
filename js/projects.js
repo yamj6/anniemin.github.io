@@ -38,6 +38,21 @@ const projects = [
     link: "https://docs.google.com/presentation/d/1CmO52Stlb7y68t36N1oe1kZbhPrxc_yevVkQ-eG7yCo/edit?usp=sharing"
   },
   {
+    title: "Student Mental Health Dataset Evaluation",
+    category: "Statistical Graphics & Visualization",
+    tag: "data",
+    date: "March 2026 – April 2026",
+    location: "Carnegie Mellon University, Pittsburgh",
+    bullets: [
+      "Visualized and analyzed variables in RStudio to uncover trends in student mental health across a 150,000-student dataset.",
+      "Summarized and presented key findings and takeaways in a slideshow."
+    ],
+    thumb: "assets/thumbs/mental-health.svg",
+    caseStudy: "case-studies/mental-health.html",
+    linkLabel: "Slides",
+    link: "https://docs.google.com/presentation/d/1ZR8_kccfal4U0w3XGhmYPQA2-slTqbJr_3assf55akY/edit?usp=sharing"
+  },
+  {
     title: "Classic Creamery",
     category: "Application Design and Development",
     tag: "development",
@@ -52,21 +67,6 @@ const projects = [
     caseStudy: "",
     linkLabel: "Link coming soon",
     link: ""
-  },
-  {
-    title: "Student Mental Health Dataset Evaluation",
-    category: "Statistical Graphics & Visualization",
-    tag: "data",
-    date: "March 2026 – April 2026",
-    location: "Carnegie Mellon University, Pittsburgh",
-    bullets: [
-      "Visualized and analyzed variables in RStudio to uncover trends in student mental health across a 150,000-student dataset.",
-      "Summarized and presented key findings and takeaways in a slideshow."
-    ],
-    thumb: "assets/thumbs/mental-health.svg",
-    caseStudy: "case-studies/mental-health.html",
-    linkLabel: "Slides",
-    link: "https://docs.google.com/presentation/d/1ZR8_kccfal4U0w3XGhmYPQA2-slTqbJr_3assf55akY/edit?usp=sharing"
   }
 ];
 
